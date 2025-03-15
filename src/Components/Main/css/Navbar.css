@@ -1,0 +1,155 @@
+/* General navbar styling */
+.navbar {
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+    padding: 15px 50px;
+    background-color: white;
+}
+
+/* Logo styling */
+.logo img {
+    height: 80px;
+    /* Default size */
+    width: auto;
+}
+
+/* Navigation items */
+.nav-items {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #072c3b;
+    padding-right: 95px;
+}
+
+a {
+    color: #072c3b;
+    text-decoration: none;
+}
+
+.nav-items li {
+    position: relative;
+    cursor: pointer;
+}
+
+li:hover {
+    color: #e74c3c;
+}
+
+/* Active state dot */
+.nav-items .active .dot {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 30px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .nav-items {
+        gap: 20px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+    }
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    list-style: none;
+    padding: 10px;
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+    display: block;
+    border-radius: 5px;
+    min-width: 150px;
+}
+
+.dropdown-menu li {
+    padding: 8px 15px;
+    font-size: 16px;
+    color: #072c3b;
+    white-space: nowrap;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f0f0f0;
+    color: #e74c3c;
+}
+
+.sub-dropdown {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: white;
+    list-style: none;
+    padding: 0;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.sub-dropdown li {
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.sub-dropdown li:hover {
+    background-color: #666;
+}
+
+/* Show sub-dropdown on hover */
+.dropdown:hover .sub-dropdown {
+    display: block;
+}

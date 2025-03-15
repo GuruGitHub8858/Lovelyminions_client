@@ -1,0 +1,142 @@
+/* Footer Base Styling */
+.footer {
+    padding: 50px 80px;
+    text-align: center;
+    font-family: 'Catamaran', sans-serif;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Left Section */
+.footer-left {
+    display: flex;
+    gap: 50px;
+}
+
+.footer-left ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-left li {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer-left li:hover {
+    color: #e74c3c;
+}
+
+/* Center Section */
+.footer-logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white
+}
+
+/* Right Section */
+.footer-right {
+    text-align: left;
+}
+
+.footer-right p,
+.footer-right a {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-center img {
+    width: auto;
+    /* Adjust width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    max-height: 80px;
+    /* Optional: Limit height */
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+/* Book a Visit Button */
+.visit-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.visit-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-icons i {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.social-icons i:hover {
+    color: #e74c3c;
+}
+
+/* Copyright */
+.copyright {
+    font-size: 14px;
+    color: white;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.footer-datas {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-right {
+        margin-top: 20px;
+    }
+}
+
+.footer-text {
+    padding-right: 47px;
+    text-decoration: none;
+    color: yellow;
+}
